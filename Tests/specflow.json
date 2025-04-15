@@ -1,0 +1,14 @@
+{
+  "language": {
+    "feature": "en"
+  },
+  "bindingCulture": {
+    "language": "en-us"
+  },
+  "plugins": [
+    {
+      "name": "SpecFlow.NUnit",
+      "type": "Generator"
+    }
+  ]
+}

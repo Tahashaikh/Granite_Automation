@@ -1,14 +1,32 @@
 {
-  "language": {
-    "feature": "en"
-  },
+  "$schema": "https://specflow.org/specflow-config-schema.json",
   "bindingCulture": {
-    "language": "en-us"
+    "language": "en"
   },
   "plugins": [
     {
       "name": "SpecFlow.NUnit",
       "type": "Generator"
     }
-  ]
+  ],
+  "generator": {
+    "path": "Features"
+  },
+  "nUnit": {
+    "parallelizable": {
+      "testThreadCount": 4,     
+      "scope": "Scenario" 
+    }
+  },
+  "stepAssemblies": [
+    {
+      "assembly": "Tests"
+    }
+  ],
+  "trace": {
+    "stepDefinitionSkeletonStyle": "RegexAttribute",
+    "traceTimings": false,
+    "traceSuccessfulSteps": false,
+    "traceStepMatchings": false
+  }
 }

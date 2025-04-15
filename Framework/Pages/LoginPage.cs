@@ -1,28 +1,47 @@
 using Microsoft.Playwright;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
-namespace Framework.Pages
+namespace Framework.Pages;
+
+public class LoginPage
 {
-    public class LoginPage
+    private readonly IPage _page;
+    private readonly string _baseUrl;
+
+    public LoginPage(IPage page, IConfiguration config)
     {
-        private readonly IPage _page;
+        _page = page;
+        _baseUrl = config["BaseUrl"] ?? throw new ArgumentNullException(nameof(config), "BaseUrl is not configured");
+    }
 
-        public LoginPage(IPage page) => _page = page;
+    public async Task NavigateAsync()
+    {
+        await _page.GotoAsync(_baseUrl);
+    }
 
-        public async Task NavigateAsync() {
-            await _page.GotoAsync("https://pms-qa.granite.health/"); 
-        }
+    private IFrameLocator GetLoginFrame()
+    {
+        return _page.FrameLocator("frame");
+    }
 
-        public async Task EnterUsername(string username) {
-            await _page.FillAsync("#email", username); 
-        }
+    public async Task EnterUsername(string username)
+    {
+        var frame = GetLoginFrame();
+        await frame.Locator("input[name=\"email\"]").ClickAsync();
+        await frame.Locator("input[name=\"email\"]").FillAsync(username);
+    }
 
-        public async Task EnterPassword(string password) { 
-            await _page.FillAsync("#password", password); 
-        }
+    public async Task EnterPassword(string password)
+    {
+        var frame = GetLoginFrame();
+        await frame.Locator("input[name=\"password\"]").ClickAsync();
+        await frame.Locator("input[name=\"password\"]").FillAsync(password);
+    }
 
-        public async Task ClickLogin() {
-            await _page.ClickAsync("#login"); 
-        }
+    public async Task ClickLogin()
+    {
+        var frame = GetLoginFrame();
+        await frame.GetByRole(AriaRole.Button, new() { Name = "Submit Sign In" }).ClickAsync();
+        await _page.WaitForLoadStateAsync(LoadState.NetworkIdle);
     }
 }

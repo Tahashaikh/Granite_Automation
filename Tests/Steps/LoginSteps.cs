@@ -14,6 +14,7 @@ namespace Tests.Steps
         private IPage _page;
         private LoginPage _loginPage;
 
+
         [BeforeScenario]
         public async Task Setup()
         {
@@ -41,10 +42,14 @@ namespace Tests.Steps
         public async Task ThenIShouldSeeTheDashboard()
         {
             var content = await _page.InnerTextAsync("h1");
-            Assert.That(content, Does.Contain("Dashboard"));
+            Assert.That(content, Does.Contain("Tracker"));
         }
 
         [AfterScenario]
-        public async Task TearDown() => await _browser.CloseAsync();
-    }
+        public async Task TearDown()
+        {
+            await _page.CloseAsync();
+            await _browser.CloseAsync();
+        }
+    } 
 }

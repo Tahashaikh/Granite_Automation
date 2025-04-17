@@ -47,6 +47,6 @@ public class LoginPage
     }
     public async Task Verification()
     {
-        await Expect().ToBeVisibleAsync();
+        await Expect(_page.Locator("frame").ContentFrame.Locator("#nav-tracker").GetByText("Tracker")).ToBeVisibleAsync();
     }
 }

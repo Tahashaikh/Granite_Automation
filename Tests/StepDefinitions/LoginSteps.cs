@@ -58,7 +58,7 @@ public class LoginSteps
     public async Task ThenIShouldSeeTheDashboard()
     {
         // We'll implement dashboard verification later
-        await Task.CompletedTask;
+        await _loginPage.Verification();
     }
 
     [AfterScenario]

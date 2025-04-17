@@ -1,5 +1,6 @@
 using Microsoft.Playwright;
 using Microsoft.Extensions.Configuration;
+using static Microsoft.Playwright.Assertions;
 
 namespace Framework.Pages;
 
@@ -43,5 +44,9 @@ public class LoginPage
         var frame = GetLoginFrame();
         await frame.GetByRole(AriaRole.Button, new() { Name = "Submit Sign In" }).ClickAsync();
         await _page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+    }
+    public async Task Verification()
+    {
+        await Expect().ToBeVisibleAsync();
     }
 }

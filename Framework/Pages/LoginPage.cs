@@ -18,6 +18,7 @@ public class LoginPage
     public async Task NavigateAsync()
     {
         await _page.GotoAsync(_baseUrl);
+        await _page.WaitForLoadStateAsync(LoadState.NetworkIdle);
     }
 
     private IFrameLocator GetLoginFrame()
@@ -47,6 +48,8 @@ public class LoginPage
     }
     public async Task Verification()
     {
+        await _page.WaitForTimeoutAsync(20000);
         await Expect(_page.Locator("frame").ContentFrame.Locator("#nav-tracker").GetByText("Tracker")).ToBeVisibleAsync();
+        await _page.WaitForLoadStateAsync(LoadState.NetworkIdle);
     }
 }

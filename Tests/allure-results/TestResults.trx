@@ -1,136 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="3f566d67-1707-4143-9504-3568f2f2c583" name="Taha@DESKTOP-R5TG6Q1 2025-04-17 20:29:40" runUser="DESKTOP-R5TG6Q1\Taha" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-04-17T20:29:40.5341114+05:00" queuing="2025-04-17T20:29:40.5341119+05:00" start="2025-04-17T20:29:08.3015147+05:00" finish="2025-04-17T20:30:16.8456515+05:00" />
-  <TestSettings name="default" id="c8ae2d47-b7e9-4de0-b7f6-a3d9173e33a0">
-    <Deployment runDeploymentRoot="Taha_DESKTOP-R5TG6Q1_2025-04-17_20_29_40" />
+<TestRun id="dcdc22f9-2ea0-423d-9d6e-b785fd010396" name="Taha@DESKTOP-R5TG6Q1 2025-04-17 22:37:03" runUser="DESKTOP-R5TG6Q1\Taha" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-17T22:37:03.0556457+05:00" queuing="2025-04-17T22:37:03.0556462+05:00" start="2025-04-17T22:36:18.5835871+05:00" finish="2025-04-17T22:37:03.0668421+05:00" />
+  <TestSettings name="default" id="b00c41a1-8fc1-404d-8c7c-184783a11ce7">
+    <Deployment runDeploymentRoot="Taha_DESKTOP-R5TG6Q1_2025-04-17_22_37_03" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="2013836a-483c-45ed-9302-ce22645c7101" testId="41ae6f24-960a-65f4-5ca0-bca4e0004fe3" testName="ValidLogin2" computerName="DESKTOP-R5TG6Q1" duration="00:00:36.1020490" startTime="2025-04-17T20:29:40.4381954+05:00" endTime="2025-04-17T20:30:16.5402428+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2013836a-483c-45ed-9302-ce22645c7101">
-      <Output>
-        <StdOut>Given I am on the login page&#xD;
--&gt; error: Timeout 30000ms exceeded.&#xD;
-Call log:&#xD;
-  -   - navigating to "https://pms-qa.granite.health/", waiting until "load" (35.4s)&#xD;
-When I enter username "YOUR_USERNAME" and password "YOUR_PASSWORD"&#xD;
--&gt; skipped because of previous errors&#xD;
-And I click login&#xD;
--&gt; skipped because of previous errors&#xD;
-Then I should see the dashboard&#xD;
--&gt; skipped because of previous errors</StdOut>
-        <ErrorInfo>
-          <Message>System.TimeoutException : Timeout 30000ms exceeded.&#xD;
-Call log:&#xD;
-  -   - navigating to "https://pms-qa.granite.health/", waiting until "load"</Message>
-          <StackTrace>   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206&#xD;
-   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535&#xD;
-   at Microsoft.Playwright.Core.Frame.GotoAsync(String url, FrameGotoOptions options) in /_/src/Playwright/Core/Frame.cs:line 796&#xD;
-   at Framework.Pages.LoginPage.NavigateAsync() in D:\vscode_proj\Granite_Automation\Framework\Pages\LoginPage.cs:line 20&#xD;
-   at Tests.Steps.LoginSteps.GivenIAmOnTheLoginPage() in D:\vscode_proj\Granite_Automation\Tests\StepDefinitions\LoginSteps.cs:line 29&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()&#xD;
---- End of stack trace from previous location ---&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()&#xD;
---- End of stack trace from previous location ---&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)&#xD;
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
-   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
-   at Tests.Features.LoginFeature.ScenarioCleanup()&#xD;
-   at Tests.Features.LoginFeature.ValidLogin2() in D:\vscode_proj\Granite_Automation\Tests\Features\Login.feature:line 16&#xD;
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
-   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
-</StackTrace>
-        </ErrorInfo>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="481aec34-7b6a-4507-ada2-324574a3d9b0" testId="d236b48a-9589-fb2d-1984-194d9d309793" testName="ValidLogin" computerName="DESKTOP-R5TG6Q1" duration="00:00:29.7669100" startTime="2025-04-17T20:29:10.6680747+05:00" endTime="2025-04-17T20:29:40.4348676+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="481aec34-7b6a-4507-ada2-324574a3d9b0">
+    <UnitTestResult executionId="fec0375e-5a4b-4f6b-9617-190f9fd6d32b" testId="d236b48a-9589-fb2d-1984-194d9d309793" testName="ValidLogin" computerName="DESKTOP-R5TG6Q1" duration="00:00:42.6371430" startTime="2025-04-17T22:36:20.2232561+05:00" endTime="2025-04-17T22:37:02.8602472+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fec0375e-5a4b-4f6b-9617-190f9fd6d32b">
       <Output>
         <StdOut>Given I am on the login page&#xD;
 When I enter username "YOUR_USERNAME" and password "YOUR_PASSWORD"&#xD;
 And I click login&#xD;
-Then I should see the dashboard&#xD;
--&gt; error: Locator expected to be visible &#xD;
-Call log:&#xD;
-  -   - LocatorAssertions.ToBeVisibleAsync with timeout 5000ms&#xD;
-  -   - waiting for Locator("frame").ContentFrame.Locator("#nav-tracker").GetByText("Tracker") (5.2s)</StdOut>
-        <ErrorInfo>
-          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to be visible &#xD;
-Call log:&#xD;
-  -   - LocatorAssertions.ToBeVisibleAsync with timeout 5000ms&#xD;
-  -   - waiting for Locator("frame").ContentFrame.Locator("#nav-tracker").GetByText("Tracker")</Message>
-          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message) in /_/src/Playwright/Core/AssertionsBase.cs:line 85&#xD;
-   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 65&#xD;
-   at Framework.Pages.LoginPage.Verification() in D:\vscode_proj\Granite_Automation\Framework\Pages\LoginPage.cs:line 50&#xD;
-   at Tests.Steps.LoginSteps.ThenIShouldSeeTheDashboard() in D:\vscode_proj\Granite_Automation\Tests\StepDefinitions\LoginSteps.cs:line 61&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.&lt;&gt;c__DisplayClass2_0.&lt;&lt;InvokeBindingDelegateAsync&gt;b__0&gt;d.MoveNext()&#xD;
---- End of stack trace from previous location ---&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.&lt;&gt;c__DisplayClass1_0`1.&lt;&lt;RunSync&gt;b__0&gt;d.MoveNext()&#xD;
---- End of stack trace from previous location ---&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.ExclusiveSynchronizationContext.BeginMessageLoop()&#xD;
-   at TechTalk.SpecFlow.Bindings.AsyncHelpers.RunSync[T](Func`1 task)&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeBindingDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs)&#xD;
-   at TechTalk.SpecFlow.Bindings.SynchronousBindingDelegateInvoker.InvokeDelegateSynchronously(Delegate bindingDelegate, Object[] invokeArgs)&#xD;
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
-   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
-   at Tests.Features.LoginFeature.ScenarioCleanup()&#xD;
-   at Tests.Features.LoginFeature.ValidLogin() in D:\vscode_proj\Granite_Automation\Tests\Features\Login.feature:line 10&#xD;
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
-   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
-</StackTrace>
-        </ErrorInfo>
+Then I should see the dashboard</StdOut>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
-    <UnitTest name="ValidLogin" storage="d:\vscode_proj\granite_automation\tests\bin\debug\net8.0\tests.dll" id="d236b48a-9589-fb2d-1984-194d9d309793">
-      <Execution id="481aec34-7b6a-4507-ada2-324574a3d9b0" />
-      <TestMethod codeBase="D:\vscode_proj\Granite_Automation\Tests\bin\Debug\net8.0\Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="Tests.Features.LoginFeature" name="ValidLogin" />
-    </UnitTest>
-    <UnitTest name="ValidLogin2" storage="d:\vscode_proj\granite_automation\tests\bin\debug\net8.0\tests.dll" id="41ae6f24-960a-65f4-5ca0-bca4e0004fe3">
-      <Execution id="2013836a-483c-45ed-9302-ce22645c7101" />
-      <TestMethod codeBase="D:\vscode_proj\Granite_Automation\Tests\bin\Debug\net8.0\Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="Tests.Features.LoginFeature" name="ValidLogin2" />
+    <UnitTest name="ValidLogin" storage="d:\rider\granite_automation\tests\bin\debug\net8.0\tests.dll" id="d236b48a-9589-fb2d-1984-194d9d309793">
+      <Execution id="fec0375e-5a4b-4f6b-9617-190f9fd6d32b" />
+      <TestMethod codeBase="D:\Rider\Granite_Automation\Tests\bin\Debug\net8.0\Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="Tests.Features.LoginFeature" name="ValidLogin" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="41ae6f24-960a-65f4-5ca0-bca4e0004fe3" executionId="2013836a-483c-45ed-9302-ce22645c7101" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d236b48a-9589-fb2d-1984-194d9d309793" executionId="481aec34-7b6a-4507-ada2-324574a3d9b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d236b48a-9589-fb2d-1984-194d9d309793" executionId="fec0375e-5a4b-4f6b-9617-190f9fd6d32b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
-  <ResultSummary outcome="Failed">
-    <Counters total="2" executed="2" passed="0" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>NUnit Adapter 5.0.0.0: Test execution started&#xD;
-Running all tests in D:\vscode_proj\Granite_Automation\Tests\bin\Debug\net8.0\Tests.dll&#xD;
-   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+Running all tests in D:\Rider\Granite_Automation\Tests\bin\Debug\net8.0\Tests.dll&#xD;
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
 Given I am on the login page&#xD;
 When I enter username "YOUR_USERNAME" and password "YOUR_PASSWORD"&#xD;
 And I click login&#xD;
 Then I should see the dashboard&#xD;
--&gt; error: Locator expected to be visible &#xD;
-Call log:&#xD;
-  -   - LocatorAssertions.ToBeVisibleAsync with timeout 5000ms&#xD;
-  -   - waiting for Locator("frame").ContentFrame.Locator("#nav-tracker").GetByText("Tracker") (5.2s)&#xD;
-&#xD;
-Given I am on the login page&#xD;
--&gt; error: Timeout 30000ms exceeded.&#xD;
-Call log:&#xD;
-  -   - navigating to "https://pms-qa.granite.health/", waiting until "load" (35.4s)&#xD;
-When I enter username "YOUR_USERNAME" and password "YOUR_PASSWORD"&#xD;
--&gt; skipped because of previous errors&#xD;
-And I click login&#xD;
--&gt; skipped because of previous errors&#xD;
-Then I should see the dashboard&#xD;
--&gt; skipped because of previous errors&#xD;
 &#xD;
 NUnit Adapter 5.0.0.0: Test execution complete&#xD;
 </StdOut>
